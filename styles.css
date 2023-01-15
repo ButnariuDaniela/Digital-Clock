@@ -1,0 +1,66 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body, html {
+    background-image: url("images/time.jpg");
+    background-size: cover;
+}
+
+#digitalClock {
+    display: inline-block;
+    margin: 0, 6rem;
+    color:#211305;
+    font-size: 6rem;
+    font-weight: bold;
+    padding: 1rem 4rem;
+    border: 1rem #b07f1e solid;
+    background-color: #f7f6f2;
+    border-radius: 50px;
+    border-style: groove;
+    margin-left: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#digitalClock:hover{
+    color: #f5ef42;
+    background-color: black;
+    border-color: #f5ef42;
+}
+
+#title {
+    color: #f5ef42;
+    margin: 0.5em;
+    font-size: 3em;  
+}
+
+.child {
+    animation: circle 2s ease-in forwards infinite alternate;
+}
+
+@keyframes circle{
+    0% {
+        transform: translateX(0);
+        color:antiquewhite;
+    }
+
+    33% {
+        transform: translateY(100%);
+    }
+
+    66% {
+        transform: translateX(50%) translateY(100%);
+    }
+
+    100%{
+        transform: cubic-bezier(0.165, 0.84, 0.44, 1);
+        color: #b07f1e;
+    }
+}
+
+.parent {
+    height: 400px;
+    width: 600px;
+}
